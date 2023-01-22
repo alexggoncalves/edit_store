@@ -10,6 +10,7 @@ function ProductCard(props) {
     categoriesString += categories[id];
   }) 
 
+
   return (
     <Link
       to={"/product/" + product.id}

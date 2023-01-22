@@ -1,15 +1,17 @@
 import Thumbnail from "./Thumbnail";
 import ProductDetails from "./ProductDetails";
+import { ProductContext } from "../../contexts/ProductContext";
+import { useContext } from "react";
 
 const Product = (props) => {
-    const product = props.product;
+  const productContext = useContext(ProductContext);
+    const product = productContext.product;
     
     return (<>
         {product && (
         <div className="gridrow" id="product">
           
           <div id="thumbs" className="col-3 col-t-1">
-            {console.log(product)}
             <Thumbnail image={product.image}/>
 
           </div>
@@ -35,7 +37,7 @@ const Product = (props) => {
             </div>
           </div>
 
-          <ProductDetails product={product}/>
+          <ProductDetails />
 
         </div>
       )}

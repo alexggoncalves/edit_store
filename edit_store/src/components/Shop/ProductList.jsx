@@ -1,21 +1,25 @@
 import { ProductContext } from "../../contexts/ProductContext";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import ProductCard from "../shared/ProductCard";
+import { useParams } from "react-router-dom";
 
 import { v4 as uuidv4 } from 'uuid';
 
 function ProductList() {
   const productContext = useContext(ProductContext);
-  productContext.fetchProducts(20);
+  productContext.fetchProducts(25);
+  const { category } = useParams();
+  
 
-  if (productContext.products)
+
+  if (productContext.list)
     return (
       <div
         id="mainproductlist"
         className="product-list col-12 col-t-8 col-d-9 gridrowfull"
       >
         <div className="central-link-light marginbottomdouble">
-          {productContext.products.map((product) => (
+          {productContext.list.map((product) => (
             <ProductCard product={product} key={uuidv4()} / >
           ))}
 
@@ -27,4 +31,4 @@ function ProductList() {
     );
 }
 
-export default ProductList;
+export default ProductList

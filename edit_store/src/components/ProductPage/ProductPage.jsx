@@ -1,6 +1,6 @@
 import BreadCrumbs from "./BreadCrumbs";
 
-import { Link, useParams } from "react-router-dom";
+import {  useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import Product from "./Product";
@@ -9,23 +9,19 @@ import RelatedProducts from "./RelatedProducts";
 import ProductReviews from "./ProductReviews";
 import Press from "../HomePage/Press/Press"
 
-export function ProductPage(props) {
-  const [product, setProduct] = useState();
+import { ProductContext } from "../../contexts/ProductContext";
+import { useContext } from "react";
 
+export function ProductPage() {
+  const productContext = useContext(ProductContext);
   const { id } = useParams();
-
-  useEffect(() => {
-    fetch(`https://foxcoding.net/api/getProduct?id=${id}`)
-      .then((res) => res.json())
-      .then((json) => {
-        setProduct(json);
-      });
-  }, []);
+  
+  productContext.fetchProduct(id);
 
   return (
     <div className="page_container">
       <BreadCrumbs />
-      <Product product={product}/>
+      <Product/>
       
       <div className="separador">
       </div>
@@ -51,8 +47,6 @@ export function ProductPage(props) {
       <Press>
 
       </Press>
-      
-      
 
       <div className="bg-graylight paddingverticaldouble marginbottomfull">
         <div className="gridrow">
@@ -70,7 +64,7 @@ export function ProductPage(props) {
 
       <Looks />
       <ProductReviews />   
-      <RelatedProducts product={product}/>
+      <RelatedProducts/>
       
     </div>
   );

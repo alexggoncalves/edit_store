@@ -1,6 +1,6 @@
 const Score = (props) => {
   
-  
+    if(props.score)
     return (
     <div className="col-6 textright score">
       <i className="icn-star primary"></i>

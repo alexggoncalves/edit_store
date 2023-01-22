@@ -2,18 +2,12 @@ import Filters from "./Filters"
 import ProductList from "./ProductList"
 import ProductListHeader from "./ProductListHeader"
 import SortBar from "./SortBar"
-import { useParams } from "react-router-dom"
-
-import { ProductContext } from "../../contexts/ProductContext";
-import { useContext,useEffect } from "react";
+import { useEffect } from "react";
 
 function Shop() {
-  const productContext = useContext(ProductContext);
-  const { category } = useParams();
-  
-  
-  productContext.filterByCategory(category);
-
+  useEffect(()=>{
+  window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+},[])
   return (
     <>
       <ProductListHeader/>
