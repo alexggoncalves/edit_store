@@ -1,27 +1,32 @@
-import "./App.css";
 import { Route, Routes } from "react-router-dom";
 
 //PAGES
 import { HomePage } from "./components/HomePage/HomePage";
-import { ProductPage } from "./components/ProductPage/ProductPage"
-import Header from "./components/Header/Header";
-import Footer from "./components/Footer/Footer";
-import PromoBar from "./components/PromoBar/PromoBar/Promobar";
+import { ProductPage } from "./components/ProductPage/ProductPage";
+import Shop from "./components/Shop/Shop";
 
-function App() {
+import Header from "./components/shared/Header/Header";
+import Footer from "./components/shared/Footer/Footer";
+import PromoBar from "./components/shared/PromoBar/Promobar";
+
+import {ProductProvider} from "./contexts/ProductContext"
+
+const App = () => {
   return (
-    <>
-      <PromoBar text="Free shipping for orders above USD 150"/>
+    <ProductProvider>
+      <PromoBar text="Free shipping for orders above USD 150" />
       <Header />
-      <main >
+      <main>
         <Routes>
           <Route path="/" element={<HomePage />} />
-          <Route path="/product/1" element={<ProductPage id={1}/>} />
+          <Route path="/product/:id" element={<ProductPage />} />
+          <Route path="/products/*" element={<Shop />}/>
+          <Route path="/products/:category" element={<Shop />} />          
         </Routes>
       </main>
       <Footer />
-    </>
+    </ProductProvider>
   );
-}
+};
 
 export default App;

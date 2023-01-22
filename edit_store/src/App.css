@@ -299,7 +299,7 @@ html {
 }
 
 #root {
-  color: #000
+  color: #000;
 }
 
 @media (min-width: 750px) {
@@ -1790,18 +1790,18 @@ form button {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-image: url(../imgs/slider/slider01-small.jpg);
+  background-image: url(./assets/slider/slider01-small.jpg);
 }
 
 @media (min-width: 750px) {
   #headerproductlist {
-    background-image: url(../imgs/slider/slider01-medium.jpg);
+    background-image: url(./assets/slider/slider01-medium.jpg);
   }
 }
 
 @media (min-width: 1200px) {
   #headerproductlist {
-    background-image: url(../imgs/slider/slider01.jpg);
+    background-image: url(./assets/slider/slider01.jpg);
   }
 }
 
@@ -2252,18 +2252,19 @@ form button {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  background-image: url(../imgs/slider/slider01-small.jpg);
+  background-image: url(./assets/slider/slider01-small.jpg);
 }
+
 
 @media (min-width: 750px) {
   .separador {
-    background-image: url(../imgs/slider/slider01-medium.jpg);
+    background-image: url(./assets/slider/slider01-medium.jpg);
   }
 }
 
 @media (min-width: 1200px) {
   .separador {
-    background-image: url(../imgs/slider/slider01.jpg);
+    background-image: url(./assets/slider/slider01.jpg);
   }
 }
 

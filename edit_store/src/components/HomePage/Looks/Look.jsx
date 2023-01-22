@@ -13,7 +13,7 @@ const Look = (props) => {
             src= {props.image}
           />
         </div>
-        <p className="fancytext">{ props.title}</p>
+        <p className="fancytext">{props.title}</p>
       </Link>
     </div>
   );

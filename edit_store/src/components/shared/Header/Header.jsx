@@ -1,4 +1,4 @@
-import logo from "../../assets/logo.svg"
+import logo from "../../../assets/logo.svg"
 import HeaderLink from "./HeaderLink";
 
 import { Link } from "react-router-dom";
@@ -19,10 +19,10 @@ const Header = () => {
                     </Link>
                 </div>
                 <ul id="mainmenu" className="col-12 col-t-6 col-d-7">
-                    <HeaderLink	to="/shop" title="Shop" icon="icn-chevron-down" showTitle={true}/>
-                    <HeaderLink	to="#" title="Fabric" icon="icn-chevron-down" showTitle={true}/>
-                    <HeaderLink	to="#" title="Journal" icon="icn-chevron-down" showTitle={true}/>
-                    <HeaderLink	to="#" title="About" icon="icn-chevron-down" showTitle={true}/>
+                    <HeaderLink	to="/products" title="Shop" icon="icn-chevron-down" showTitle={true}/>
+                    <HeaderLink	to="/fabric" title="Fabric" icon="icn-chevron-down" showTitle={true}/>
+                    <HeaderLink	to="/journal" title="Journal" icon="icn-chevron-down" showTitle={true}/>
+                    <HeaderLink	to="/about" title="About" icon="icn-chevron-down" showTitle={true}/>
                 </ul>
                 <ul id="customermenu" className="col-7 col-t-3 col-d-2 textright">
                     <HeaderLink	to="#" title="Login" showTitle={true}/>

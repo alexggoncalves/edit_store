@@ -1,42 +1,76 @@
-import aboutImage from "../../../assets/journal/about.jpg"
+import talking01 from "../../assets/talking/talking01.png";
+import talking02 from "../../assets/talking/talking02.png";
+import talking03 from "../../assets/talking/talking03.png";
+import talking04 from "../../assets/talking/talking04.png";
+import talking05 from "../../assets/talking/talking05.png";
+import talking06 from "../../assets/talking/talking06.png";
+import talking07 from "../../assets/talking/talking07.png";
+import talking08 from "../../assets/talking/talking08.png";
 
-const About = () => {
+const Talking = () => {
   return (
-    <section id="about" class="paddingverticaldouble">
-      <h2 class="textcenter marginbottomfull">About</h2>
-      <div class="gridrow">
-        <div class="col-12 col-t-6">
+    <section id="talking" className="paddingverticaldouble">
+      <h2 className="textcenter marginbottomfull">Talking about us</h2>
+      <div className="gridrow">
+        <div className="col-4 col-t-2 col-d-1 offset-1 offset-t-1 offset-d-2 paddingbottomfull">
           <img
-            class="imgfit"
-            //srcset="imgs/journal/about.jpg 720w, imgs/journal/medium/about.jpg 410w, imgs/journal/small/about.jpg 450w"
-            sizes="(min-width: 1200px) 720px, (min-width: 750px) 410px, 450px"
-            src={aboutImage}
+            className="imgfit"
+            src="{talking01}"
+            alt="talking 1"
           />
         </div>
-        <div class="col-12 col-t-6 about">
-          <p class="margintopnone">
-            The partnership between renowned Japanese fashion designer, Yohji
-            Yamamoto and authentic sports brand, Adidas, has revolutionized the
-            industry. Adidas represents sport, Yohji Yamamoto represents design,
-            and both symbolize true craftsmanship. Together they have developed
-            the future in sportswear.
-          </p>
-          <p>
-            <span class="fancytext">Adidas and Yamamoto together since</span>
-            October 2002
-          </p>
-          <p class="marginbottomnone">
-            <span class="fancytext">The symbols</span>
-            The "Y" stands for Yohji Yamamoto
-            <br />
-            The "3" represents the signature Adidas three stripe logo
-            <br />
-            the "-" signifies the link between the two
-          </p>
+        <div className="col-4 col-t-2 col-d-1 offset-2 offset-t-2 offset-d paddingbottomfull">
+          <img
+            className="imgfit"
+            src={talking02}
+            alt="talking 2"
+          />
+        </div>
+        <div className="col-4 col-t-2 col-d-1 offset-1 offset-t-2 offset-d paddingbottomfull">
+          <img
+            className="imgfit"
+            src={talking03}
+            alt="talking 3"
+          />
+        </div>
+        <div className="col-4 col-t-2 col-d-1 offset-2 offset-t-1 offset-d  paddingbottomfull">
+          <img
+            className="imgfit"
+            src={talking04}
+            alt="talking 4"
+          />
+        </div>
+        <div className="col-4 col-t-2 col-d-1 offset-1 offset-t-2 offset-d  paddingbottomfull">
+          <img
+            className="imgfit"
+            src={talking05}
+            alt="talking 5"
+          />
+        </div>
+        <div className="col-4 col-t-2 col-d-1 offset-2 offset-t-2 offset-d paddingbottomfull">
+          <img
+            className="imgfit"
+            src={talking06}
+            alt="talking 6"
+          />
+        </div>
+        <div className="col-4 col-t-2 col-d-1 offset-1 offset-t-2 offset-d paddingbottomfull">
+          <img
+            className="imgfit"
+            src={talking07}
+            alt="talking 7"
+          />
+        </div>
+        <div className="col-4 col-t-2 col-d-1 offset-2 offset-t-4 offset-d paddingbottomfull">
+          <img
+            className="imgfit"
+            src={talking08}
+            alt="talking 8"
+          />
         </div>
       </div>
     </section>
   );
 };
 
-export default About;
+export default Talking;

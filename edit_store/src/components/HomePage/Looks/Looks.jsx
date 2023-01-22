@@ -8,9 +8,8 @@ import { v4 as uuid } from 'uuid';
 import Look from "./Look";
 
 const Looks = () => {
-  const looks = [];
+  const looks = [look1, look2, look3,look4];
   
-  looks.push(look1,look2,look3,look4);
 
   return (
     <section id="looks" className="paddingverticaldouble">
